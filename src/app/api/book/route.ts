@@ -128,10 +128,19 @@ export async function POST(request: NextRequest) {
       { status: 200 }
     )
 
-  } catch (error) {
+  } catch (error: any) {
     console.error('Email sending error:', error)
+    
+    // Check if it's an authentication error
+    if (error.code === 'EAUTH') {
+      return NextResponse.json(
+        { error: 'Email service configuration error. Please check Gmail settings.' },
+        { status: 500 }
+      )
+    }
+    
     return NextResponse.json(
-      { error: 'Failed to send booking request' },
+      { error: 'Failed to send booking request. Please try again or contact directly.' },
       { status: 500 }
     )
   }
