@@ -55,11 +55,23 @@ const BookingModal = ({ isOpen, onClose, selectedCity }: BookingModalProps) => {
           message: ''
         })
       } else {
-        throw new Error('Failed to submit booking')
+        // Try to get error message from response
+        let errorMessage = 'Failed to submit booking'
+        
+        try {
+          const errorData = await response.json()
+          if (errorData.error) {
+            errorMessage = errorData.error
+          }
+        } catch (e) {
+          // If we can't parse the error response, use default message
+        }
+        
+        throw new Error(errorMessage)
       }
     } catch (error) {
       console.error('Booking submission error:', error)
-      alert('There was an error submitting your booking. Please try again or contact me directly.')
+      alert(error instanceof Error ? error.message : 'There was an error submitting your booking. Please try again or contact me directly.')
     } finally {
       setIsSubmitting(false)
     }
@@ -72,10 +84,11 @@ const BookingModal = ({ isOpen, onClose, selectedCity }: BookingModalProps) => {
     }
   }
 
+  console.log('BookingModal render - isOpen:', isOpen, 'selectedCity:', selectedCity)
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[9999]">
       <div className="bg-white rounded-xl max-w-md w-full max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className="p-6 border-b border-gray-200">

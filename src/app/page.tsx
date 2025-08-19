@@ -12,8 +12,10 @@ export default function Home() {
   const [selectedCity, setSelectedCity] = useState('')
 
   const handleBookClick = (city: string) => {
+    console.log('handleBookClick called with city:', city)
     setSelectedCity(city)
     setIsBookingModalOpen(true)
+    console.log('Modal should now be open:', true)
   }
 
   return (

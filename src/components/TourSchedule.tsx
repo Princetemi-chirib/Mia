@@ -94,8 +94,22 @@ const TourSchedule = ({ onBookClick }: TourScheduleProps) => {
                 
                 {/* Book Button */}
                 <button
-                  onClick={() => onBookClick(tour.city)}
-                  className="btn-elegant w-full group-hover:scale-105 transition-transform duration-300"
+                  onClick={() => {
+                    console.log('Book button clicked for:', tour.city)
+                    onBookClick(tour.city)
+                  }}
+                  className="btn-elegant w-full group-hover:scale-105 transition-transform duration-300 cursor-pointer"
+                  style={{
+                    backgroundColor: '#DC2626',
+                    color: 'white',
+                    padding: '12px 24px',
+                    borderRadius: '8px',
+                    fontWeight: '500',
+                    border: 'none',
+                    cursor: 'pointer',
+                    width: '100%'
+                  }}
+                  type="button"
                 >
                   Book ❤
                 </button>

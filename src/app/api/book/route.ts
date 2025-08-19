@@ -7,9 +7,23 @@ export async function POST(request: NextRequest) {
     const { name, email, phone, socialHandle, preferredDate, message, city, introduction, location, experienceType, budgetRange } = body
 
     // Validate required fields
-    if (!name || !preferredDate || !location) {
+    if (!name) {
       return NextResponse.json(
-        { error: 'Missing required fields' },
+        { error: 'Name is required' },
+        { status: 400 }
+      )
+    }
+    
+    if (!preferredDate) {
+      return NextResponse.json(
+        { error: 'Preferred date is required' },
+        { status: 400 }
+      )
+    }
+    
+    if (!location && !city) {
+      return NextResponse.json(
+        { error: 'Location is required' },
         { status: 400 }
       )
     }

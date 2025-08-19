@@ -72,6 +72,7 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    console.log('Contact form submitted with data:', formData)
     setIsSubmitting(true)
 
     try {
@@ -98,11 +99,23 @@ const Contact = () => {
           message: ''
         })
       } else {
-        throw new Error('Failed to submit booking')
+        // Try to get error message from response
+        let errorMessage = 'Failed to submit booking'
+        
+        try {
+          const errorData = await response.json()
+          if (errorData.error) {
+            errorMessage = errorData.error
+          }
+        } catch (e) {
+          // If we can't parse the error response, use default message
+        }
+        
+        throw new Error(errorMessage)
       }
     } catch (error) {
       console.error('Booking submission error:', error)
-      alert('There was an error submitting your booking. Please try again or contact me directly.')
+      alert(error instanceof Error ? error.message : 'There was an error submitting your booking. Please try again or contact me directly.')
     } finally {
       setIsSubmitting(false)
     }
@@ -252,6 +265,17 @@ const Contact = () => {
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full btn-elegant bg-white text-mia-red hover:bg-mia-light-red disabled:opacity-50 disabled:cursor-not-allowed"
+                  style={{
+                    backgroundColor: 'white',
+                    color: '#DC2626',
+                    padding: '12px 24px',
+                    borderRadius: '8px',
+                    fontWeight: '500',
+                    border: 'none',
+                    cursor: isSubmitting ? 'not-allowed' : 'pointer',
+                    width: '100%',
+                    opacity: isSubmitting ? 0.5 : 1
+                  }}
                 >
                   {isSubmitting ? 'Sending...' : 'Submit Booking Request ❤'}
                 </button>
