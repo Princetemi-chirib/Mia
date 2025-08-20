@@ -214,16 +214,16 @@ const BookingModal = ({ isOpen, onClose, selectedCity }: BookingModalProps) => {
                 Booking Request Sent!
               </h3>
               <p className="text-mia-gray mb-6">
-                Thanks for booking! Please DM me directly on Instagram, Twitter, or Telegram to complete payment and confirm your spot ❤
+                Thanks for booking! Please DM me directly on Facebook, Telegram, or Twitter to complete payment and confirm your spot ❤
               </p>
               <div className="space-y-3">
                 <a
-                  href="https://instagram.com/miamalkova"
+                  href="https://www.facebook.com/share/1EV6GWmMER/?mibextid=wwXIfr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block btn-elegant"
                 >
-                  DM on Instagram 💋
+                  Message on Facebook 📘
                 </a>
                 <a
                   href="https://t.me/miamalkova"

@@ -25,13 +25,6 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      name: 'Instagram',
-      handle: '@miamalkova',
-      url: 'https://instagram.com/miamalkova',
-      icon: '📸',
-      color: 'bg-gradient-to-r from-purple-500 to-pink-500'
-    },
-    {
       name: 'Facebook',
       handle: '@miamalkova',
       url: 'https://www.facebook.com/share/1EV6GWmMER/?mibextid=wwXIfr',
@@ -39,18 +32,18 @@ const Contact = () => {
       color: 'bg-gradient-to-r from-blue-600 to-blue-800'
     },
     {
-      name: 'Twitter/X',
-      handle: '@miamalkova_e',
-      url: 'https://x.com/miamalkova_e?s=21',
-      icon: '🐦',
-      color: 'bg-gradient-to-r from-black to-gray-800'
-    },
-    {
       name: 'Telegram',
       handle: '@miamalkova',
       url: 'https://t.me/miamalkova',
       icon: '✈️',
       color: 'bg-gradient-to-r from-blue-500 to-blue-700'
+    },
+    {
+      name: 'Twitter/X',
+      handle: '@miamalkova_e',
+      url: 'https://x.com/miamalkova_e?s=21',
+      icon: '🐦',
+      color: 'bg-gradient-to-r from-black to-gray-800'
     }
   ]
 
@@ -362,14 +355,6 @@ const Contact = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="https://instagram.com/miamalkova"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-elegant bg-white text-mia-red hover:bg-mia-light-red"
-              >
-                DM on Instagram 💋
-              </a>
-              <a
                 href="https://www.facebook.com/share/1EV6GWmMER/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -378,20 +363,20 @@ const Contact = () => {
                 Message on Facebook 📘
               </a>
               <a
+                href="https://t.me/miamalkova"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-elegant bg-white text-mia-red hover:bg-mia-light-red"
+              >
+                Message on Telegram ✈️
+              </a>
+              <a
                 href="https://x.com/miamalkova_e?s=21"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline border-white text-white hover:bg-white hover:text-mia-red"
               >
                 DM on Twitter/X 🐦
-              </a>
-              <a
-                href="https://t.me/miamalkova"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline border-white text-white hover:bg-white hover:text-mia-red"
-              >
-                Message on Telegram ✈️
               </a>
             </div>
           </div>

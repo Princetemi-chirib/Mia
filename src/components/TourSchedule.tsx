@@ -17,7 +17,7 @@ const TourSchedule = ({ onBookClick }: TourScheduleProps) => {
     {
       city: 'Minneapolis',
       dates: 'Sep 2–6',
-      image: '/images/66583f6b-087a-4cb3-ad26-1cce957605ab.jpeg',
+      image: '/images/WhatsApp Image 2025-08-18 at 17.14.32_db82ba28.jpg',
       status: 'available'
     },
     {
@@ -42,6 +42,60 @@ const TourSchedule = ({ onBookClick }: TourScheduleProps) => {
       city: 'Miami',
       dates: 'Oct 8–13',
       image: '/images/0963e26d-19cc-4831-8b5d-74e8d31d2f14.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Dallas',
+      dates: 'Oct 18–23',
+      image: '/images/1.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'San Francisco',
+      dates: 'Oct 28–Nov 2',
+      image: '/images/2.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Seattle',
+      dates: 'Nov 8–13',
+      image: '/images/10.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Boston',
+      dates: 'Nov 18–23',
+      image: '/images/11.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Washington DC',
+      dates: 'Nov 28–Dec 3',
+      image: '/images/12.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Atlanta',
+      dates: 'Dec 8–13',
+      image: '/images/13.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Houston',
+      dates: 'Dec 18–23',
+      image: '/images/14.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Las Vegas',
+      dates: 'Dec 28–Jan 2',
+      image: '/images/15.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Phoenix',
+      dates: 'Jan 8–13',
+      image: '/images/16.jpeg',
       status: 'available'
     }
   ]
