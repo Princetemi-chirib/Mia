@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
 export async function POST(request: NextRequest) {
   try {
@@ -28,14 +28,8 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Create email transporter
-    const transporter = nodemailer.createTransport({
-      service: 'outlook',
-      auth: {
-        user: process.env.EMAIL_USER || 'your-email@outlook.com',
-        pass: process.env.EMAIL_PASS || 'your-app-password'
-      }
-    })
+    // Initialize Resend
+    const resend = new Resend(process.env.RESEND_API_KEY || 're_cKUBCaH3_BZeerrgy1en5ZDdqRFNzMtBd')
 
     // Email content
     const emailContent = `
@@ -126,16 +120,15 @@ export async function POST(request: NextRequest) {
       </div>
     `
 
-    // Email options
-    const mailOptions = {
-      from: process.env.EMAIL_USER || 'your-email@gmail.com',
-      to: 'Officialmiamalkovaprivatemail@gmail.com',
+    // Send email using Resend
+    console.log('Attempting to send email...')
+    const result = await resend.emails.send({
+      from: 'onboarding@resend.dev',
+      to: ['Officialmiamalkovaprivatemail@gmail.com'],
       subject: `New Booking Request - ${location || city} - ${name}`,
       html: emailContent
-    }
-
-    // Send email
-    await transporter.sendMail(mailOptions)
+    })
+    console.log('Email sent successfully:', result)
 
     return NextResponse.json(
       { message: 'Booking request sent successfully' },
@@ -144,14 +137,6 @@ export async function POST(request: NextRequest) {
 
   } catch (error: any) {
     console.error('Email sending error:', error)
-    
-    // Check if it's an authentication error
-    if (error.code === 'EAUTH') {
-      return NextResponse.json(
-        { error: 'Email service configuration error. Please check Gmail settings.' },
-        { status: 500 }
-      )
-    }
     
     return NextResponse.json(
       { error: 'Failed to send booking request. Please try again or contact directly.' },
