@@ -9,8 +9,8 @@ export default function Pricing() {
     {
       title: 'Hourly Rendezvous',
       packages: [
-        { duration: '1 Hour', price: '$800' },
-        { duration: '2 Hours', price: '$1,500' }
+        { duration: '1 Hour', price: '$800', description: 'A perfect introduction to our time together.' },
+        { duration: '2 Hours', price: '$1,500', description: 'Extended pleasure and deeper connection.' }
       ]
     },
     {
