@@ -47,7 +47,7 @@ const TourSchedule = ({ onBookClick }: TourScheduleProps) => {
   ]
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-mia-light-red to-white">
+    <section id="tour-schedule" className="py-20 px-4 bg-gradient-to-br from-mia-light-red to-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">

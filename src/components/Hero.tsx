@@ -59,11 +59,17 @@ const Hero = () => {
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="btn-elegant text-lg px-10 py-4">
+          <button 
+            onClick={() => document.getElementById('tour-schedule')?.scrollIntoView({ behavior: 'smooth' })}
+            className="btn-elegant text-lg px-10 py-4"
+          >
             View My Schedule ❤
           </button>
-          <button className="btn-outline text-lg px-10 py-4 border-white text-white hover:bg-white hover:text-mia-red">
-            Contact Me 💋
+          <button 
+            onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+            className="btn-outline text-lg px-10 py-4 border-white text-white hover:bg-white hover:text-mia-red"
+          >
+            View Rates & Info 💋
           </button>
         </div>
       </div>

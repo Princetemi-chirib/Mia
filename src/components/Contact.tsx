@@ -32,11 +32,18 @@ const Contact = () => {
       color: 'bg-gradient-to-r from-purple-500 to-pink-500'
     },
     {
-      name: 'Twitter',
+      name: 'Facebook',
       handle: '@miamalkova',
-      url: 'https://twitter.com/miamalkova',
+      url: 'https://www.facebook.com/share/1EV6GWmMER/?mibextid=wwXIfr',
+      icon: '📘',
+      color: 'bg-gradient-to-r from-blue-600 to-blue-800'
+    },
+    {
+      name: 'Twitter/X',
+      handle: '@miamalkova_e',
+      url: 'https://x.com/miamalkova_e?s=21',
       icon: '🐦',
-      color: 'bg-gradient-to-r from-blue-400 to-blue-600'
+      color: 'bg-gradient-to-r from-black to-gray-800'
     },
     {
       name: 'Telegram',
@@ -361,6 +368,22 @@ const Contact = () => {
                 className="btn-elegant bg-white text-mia-red hover:bg-mia-light-red"
               >
                 DM on Instagram 💋
+              </a>
+              <a
+                href="https://www.facebook.com/share/1EV6GWmMER/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-elegant bg-white text-mia-red hover:bg-mia-light-red"
+              >
+                Message on Facebook 📘
+              </a>
+              <a
+                href="https://x.com/miamalkova_e?s=21"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline border-white text-white hover:bg-white hover:text-mia-red"
+              >
+                DM on Twitter/X 🐦
               </a>
               <a
                 href="https://t.me/miamalkova"

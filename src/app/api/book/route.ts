@@ -30,9 +30,9 @@ export async function POST(request: NextRequest) {
 
     // Create email transporter
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      service: 'outlook',
       auth: {
-        user: process.env.EMAIL_USER || 'your-email@gmail.com',
+        user: process.env.EMAIL_USER || 'your-email@outlook.com',
         pass: process.env.EMAIL_PASS || 'your-app-password'
       }
     })
@@ -129,7 +129,7 @@ export async function POST(request: NextRequest) {
     // Email options
     const mailOptions = {
       from: process.env.EMAIL_USER || 'your-email@gmail.com',
-      to: 'rabiutemi@gmail.com',
+      to: 'Officialmiamalkovaprivatemail@gmail.com',
       subject: `New Booking Request - ${location || city} - ${name}`,
       html: emailContent
     }

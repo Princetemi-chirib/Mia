@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import TourSchedule from '@/components/TourSchedule'
+import Pricing from '@/components/Pricing'
 import Contact from '@/components/Contact'
 import BookingModal from '@/components/BookingModal'
 
@@ -28,6 +29,9 @@ export default function Home() {
       
       {/* Tour Schedule Section */}
       <TourSchedule onBookClick={handleBookClick} />
+      
+      {/* Pricing Section */}
+      <Pricing />
       
       {/* Contact Section */}
       <Contact />
