@@ -10,37 +10,37 @@ const TourSchedule = ({ onBookClick }: TourScheduleProps) => {
   const tourDates = [
     {
       city: 'Denver',
-      dates: 'Aug 18–22',
+      dates: 'Aug 25–29',
       image: '/images/31a9fe32-5c22-4da4-97c1-bf7f487d902d.jpeg',
       status: 'available'
     },
     {
       city: 'Minneapolis',
-      dates: 'Aug 25–29',
+      dates: 'Sep 2–6',
       image: '/images/66583f6b-087a-4cb3-ad26-1cce957605ab.jpeg',
       status: 'available'
     },
     {
       city: 'Chicago',
-      dates: 'Sep 2–6',
+      dates: 'Sep 10–15',
       image: '/images/372b8c27-c0ce-4253-81d3-aa4401d93184.jpeg',
       status: 'available'
     },
     {
       city: 'New York',
-      dates: 'Sep 10–15',
+      dates: 'Sep 18–23',
       image: '/images/230c6246-eb2e-484c-a26f-bf0977d891f8.jpeg',
       status: 'available'
     },
     {
       city: 'Los Angeles',
-      dates: 'Sep 20–25',
+      dates: 'Sep 28–Oct 3',
       image: '/images/cb5f2f0b-f6ec-46ed-9be0-3e5919fe4930.jpeg',
       status: 'available'
     },
     {
       city: 'Miami',
-      dates: 'Oct 1–6',
+      dates: 'Oct 8–13',
       image: '/images/0963e26d-19cc-4831-8b5d-74e8d31d2f14.jpeg',
       status: 'available'
     }
