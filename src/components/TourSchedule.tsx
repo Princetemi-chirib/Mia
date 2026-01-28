@@ -10,92 +10,290 @@ const TourSchedule = ({ onBookClick }: TourScheduleProps) => {
   const tourDates = [
     {
       city: 'Denver',
-      dates: 'Aug 25–29',
+      dates: 'Feb 1–5',
       image: '/images/31a9fe32-5c22-4da4-97c1-bf7f487d902d.jpeg',
       status: 'available'
     },
     {
       city: 'Minneapolis',
-      dates: 'Sep 2–6',
+      dates: 'Feb 8–12',
       image: '/images/WhatsApp Image 2025-08-18 at 17.14.32_db82ba28.jpg',
       status: 'available'
     },
     {
       city: 'Chicago',
-      dates: 'Sep 10–15',
+      dates: 'Feb 15–19',
       image: '/images/372b8c27-c0ce-4253-81d3-aa4401d93184.jpeg',
       status: 'available'
     },
     {
       city: 'New York',
-      dates: 'Sep 18–23',
+      dates: 'Feb 22–26',
       image: '/images/230c6246-eb2e-484c-a26f-bf0977d891f8.jpeg',
       status: 'available'
     },
     {
       city: 'Los Angeles',
-      dates: 'Sep 28–Oct 3',
+      dates: 'Mar 1–5',
       image: '/images/cb5f2f0b-f6ec-46ed-9be0-3e5919fe4930.jpeg',
       status: 'available'
     },
     {
       city: 'Miami',
-      dates: 'Oct 8–13',
+      dates: 'Mar 8–12',
       image: '/images/0963e26d-19cc-4831-8b5d-74e8d31d2f14.jpeg',
       status: 'available'
     },
     {
       city: 'Dallas',
-      dates: 'Oct 18–23',
+      dates: 'Mar 15–19',
       image: '/images/1.jpeg',
       status: 'available'
     },
     {
       city: 'San Francisco',
-      dates: 'Oct 28–Nov 2',
+      dates: 'Mar 22–26',
       image: '/images/2.jpeg',
       status: 'available'
     },
     {
       city: 'Seattle',
-      dates: 'Nov 8–13',
+      dates: 'Mar 29–Apr 2',
       image: '/images/10.jpeg',
       status: 'available'
     },
     {
       city: 'Boston',
-      dates: 'Nov 18–23',
+      dates: 'Apr 5–9',
       image: '/images/11.jpeg',
       status: 'available'
     },
     {
       city: 'Washington DC',
-      dates: 'Nov 28–Dec 3',
+      dates: 'Apr 12–16',
       image: '/images/12.jpeg',
       status: 'available'
     },
     {
       city: 'Atlanta',
-      dates: 'Dec 8–13',
+      dates: 'Apr 19–23',
       image: '/images/13.jpeg',
       status: 'available'
     },
     {
       city: 'Houston',
-      dates: 'Dec 18–23',
+      dates: 'Apr 26–30',
       image: '/images/14.jpeg',
       status: 'available'
     },
     {
       city: 'Las Vegas',
-      dates: 'Dec 28–Jan 2',
+      dates: 'May 3–7',
       image: '/images/15.jpeg',
       status: 'available'
     },
     {
       city: 'Phoenix',
-      dates: 'Jan 8–13',
+      dates: 'May 10–14',
       image: '/images/16.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Salt Lake City',
+      dates: 'May 17–21',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.26.54 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Portland',
+      dates: 'May 24–28',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.03 AM (1).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'San Diego',
+      dates: 'May 31–Jun 4',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.26.57 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Nashville',
+      dates: 'Jun 7–11',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.04 AM (2).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'New Orleans',
+      dates: 'Jun 14–18',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.26.58 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Charlotte',
+      dates: 'Jun 21–25',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.01 AM (3).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Detroit',
+      dates: 'Jun 28–Jul 2',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.26.53 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Philadelphia',
+      dates: 'Jul 5–9',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.02 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Baltimore',
+      dates: 'Jul 12–16',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.04 AM (3).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Indianapolis',
+      dates: 'Jul 19–23',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.04 AM (3).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Columbus',
+      dates: 'Jul 26–30',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.26.56 AM (1).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Milwaukee',
+      dates: 'Aug 2–6',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.03 AM (4).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Kansas City',
+      dates: 'Aug 9–13',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.01 AM (1).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'St. Louis',
+      dates: 'Aug 16–20',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.00 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Oklahoma City',
+      dates: 'Aug 23–27',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.26.55 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Albuquerque',
+      dates: 'Aug 30–Sep 3',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.04 AM (1).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Cincinnati',
+      dates: 'Sep 6–10',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.03 AM (2).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Raleigh',
+      dates: 'Sep 13–17',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.26.56 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Jacksonville',
+      dates: 'Sep 20–24',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.04 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Memphis',
+      dates: 'Sep 27–Oct 1',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.03 AM (3).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Louisville',
+      dates: 'Oct 4–8',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.26.58 AM (1).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Richmond',
+      dates: 'Oct 11–15',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.02 AM (1).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Cleveland',
+      dates: 'Oct 18–22',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.01 AM (2).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Pittsburgh',
+      dates: 'Oct 25–29',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.03 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Hartford',
+      dates: 'Nov 1–5',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.26.53 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Charleston',
+      dates: 'Nov 8–12',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.01 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Norfolk',
+      dates: 'Nov 15–19',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.26.57 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Austin',
+      dates: 'Nov 22–26',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.04 AM (2).jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Sacramento',
+      dates: 'Nov 29–Dec 3',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.26.54 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Orlando',
+      dates: 'Dec 6–10',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.27.00 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Providence',
+      dates: 'Dec 13–17',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.26.55 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Santa Fe',
+      dates: 'Dec 20–24',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.26.59 AM.jpeg',
+      status: 'available'
+    },
+    {
+      city: 'Honolulu',
+      dates: 'Dec 27–31',
+      image: '/images/WhatsApp Image 2026-01-28 at 7.26.56 AM (1).jpeg',
       status: 'available'
     }
   ]
